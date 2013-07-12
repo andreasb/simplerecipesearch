@@ -14,8 +14,8 @@ Database.prototype = {
 
 		var mongo = require('mongodb');
 
-		//var mongoUri = 'mongodb://andreasbirkebaek:andreas@ds035358.mongolab.com:35358/heroku_app16874533';
-		var mongoUri = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost/mydb';
+		var mongoUri = 'mongodb://andreasbirkebaek:andreas@ds035358.mongolab.com:35358/heroku_app16874533';
+		//var mongoUri = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost/mydb';
 
 		var re = new RegExp(data.searchTerm, "i");
 		mongo.Db.connect(mongoUri, function (err, db) {
