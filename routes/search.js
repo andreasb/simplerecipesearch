@@ -15,6 +15,12 @@ exports.index = function(req, res){
 
 	db.getSearchResults(res, data, function(err, data) {
 		var count = 0;
+		console.log('error is '+err);
+		if (err) {
+			data.numberOfResults = 0;
+			res.render('search', data);
+			return;
+		};
 		data.numberOfResults = data.recipes.length;
 		res.render('search', data);
 	});

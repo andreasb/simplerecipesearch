@@ -13,6 +13,10 @@ Database.prototype = {
 	getSearchResults: function (res, data, callback) {
 		var re = new RegExp(data.searchTerm, "i");
 		this.db.recipes.find({name: re} , function(err, docs) {
+    		if (err) {
+    			callback(true, data);
+    			return;
+    		};
     		var result = docs;
     		data.recipes = result;
     		callback(null, data);
