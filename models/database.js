@@ -4,7 +4,7 @@ var config = require('../config')
 settings = config.database;
 
 function Database () {
-	var db = mongojs(process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || recipesdb, [recipes]);
+	var db = mongojs(process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || settings.name, ['recipes']);
 	this.db = db;
 	this.collection = settings.collection;
 }
