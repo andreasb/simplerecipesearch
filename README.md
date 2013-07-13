@@ -15,4 +15,3 @@ The project is open source, so feel free to fork, edit and submit pull requests.
 * [ ] Add a way to display more recipe info on the site.
   * Idea: reveal ingredients, yield and cooking time by clicking a recipe.
 * [ ] Add a way to load more recipes. For now only 1000 recipes are displayed.
-
