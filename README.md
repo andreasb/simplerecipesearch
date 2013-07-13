@@ -1,4 +1,4 @@
-[Simple Recipes Search](http://www.simplerecipesearch.com/) is a search engine for [Open Recipes](http://openrecip.es/).
+[Simple Recipes Search](http://simplerecipesearch.com/) is a search engine for [Open Recipes](http://openrecip.es/).
 
 The purpose of Simple Recipe search is to provide a way to search through the recipes in a non-filtered and non-distracted way.
 
