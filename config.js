@@ -1,4 +1,4 @@
 exports.database = {
-	name: 'recipedb',
+	local_db_uri: 'mongodb://localhost/recipedb',
 	collection: 'recipes'
 }
