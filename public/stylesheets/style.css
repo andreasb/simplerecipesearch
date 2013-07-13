@@ -1,6 +1,6 @@
 body {
   margin: 0 0 0 0;
-  font: 20px "Arial", Helvetica, sans-serif;
+   font-family: "nimbus-sans",sans-serif;
 }
 
 #header {
@@ -29,6 +29,7 @@ li {
 	list-style-type: none;
 	overflow: hidden;
 	border-bottom: 1px dotted lightgrey;
+	line-height: 22px;
 }
 
 a {
