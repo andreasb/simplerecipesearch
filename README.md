@@ -17,8 +17,8 @@ The project is open source, so feel free to fork, edit and submit pull requests.
 ### To Do
 
 * Add a way to navigate back to search from search results page
-* Display the total number of recipes on the splash page
-* Provide a bit of context of the project on the splash page
+* ~~Display the total number of recipes on the splash page~~
+* ~~Provide a bit of context of the project on the splash page~~
 * Better support for mobile browsers
 * Add a way to display more recipe info on the site.
   * Idea: reveal ingredients, yield and cooking time by clicking a recipe.
