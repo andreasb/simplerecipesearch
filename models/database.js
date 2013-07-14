@@ -22,6 +22,20 @@ Database.prototype = {
 		    });
 		  });
 		});
+	},
+	getNumberOfRecipes: function (res, data, callback) {
+		mongo.Db.connect(mongoUri, function(err, db) {
+			db.collection(settings.collection, function(err, collection) {
+				collection.count(function(err, count) {
+					if (err) {
+						callback(true, data);
+						return;
+					};
+					data.number_of_recipes = count;
+					callback(null, data);
+				});
+			});
+		});
 	}
 };
 
