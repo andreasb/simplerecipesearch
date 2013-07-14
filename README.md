@@ -6,6 +6,13 @@ The purpose of Simple Recipe search is to provide a way to search through the re
 
 The project is open source, so feel free to fork, edit and submit pull requests.
 
+### Installation
+
+1. Fork the repo.
+2. Clone the repo with `git clone https://github.com/andreasb/simplerecipesearch.git`.
+3. Then install dependencies with `cd simplerecipesearch && npm install -d`.
+4. Run the app: `node app`.
+
 ### To Do:
 
 * Add a way to navigate back to search from search results page
