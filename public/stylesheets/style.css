@@ -1,6 +1,6 @@
 body {
-  margin: 0 0 0 0;
-   font-family: "nimbus-sans",sans-serif;
+  	margin: 0 0 0 0;
+  	font-family: "nimbus-sans", sans-serif;
 }
 
 #header {
@@ -16,8 +16,10 @@ body {
 }
 
 ul {
+	font-size: 18px;
 	width: 300px;
 	margin: auto;
+	margin-bottom: 40px;
 	padding: 0;
 }
 
@@ -52,5 +54,5 @@ input {
 }
 
 a:hover {
-	border-bottom: 3px solid grey;
+	border-bottom: 2px solid grey;
 }
