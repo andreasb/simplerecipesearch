@@ -10,6 +10,8 @@ The project is open source, so feel free to fork, edit and submit pull requests.
 
 1. Clone the repo with `git clone https://github.com/andreasb/simplerecipesearch.git`.
 2. Then install dependencies with `cd simplerecipesearch && npm install -d`.
+3. Download the recipes from [Open Recipes](http://openrecip.es/) and [put them into MongoDB](http://docs.mongodb.org/manual/reference/program/mongoimport/).
+4. Create a `config.js` based on `config.example.js` and your DB info.
 3. Run the app: `node app`.
 
 ### To Do
