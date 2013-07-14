@@ -8,10 +8,9 @@ The project is open source, so feel free to fork, edit and submit pull requests.
 
 ### Installation
 
-1. Fork the repo.
-2. Clone the repo with `git clone https://github.com/andreasb/simplerecipesearch.git`.
-3. Then install dependencies with `cd simplerecipesearch && npm install -d`.
-4. Run the app: `node app`.
+1. Clone the repo with `git clone https://github.com/andreasb/simplerecipesearch.git`.
+2. Then install dependencies with `cd simplerecipesearch && npm install -d`.
+3. Run the app: `node app`.
 
 ### To Do
 
