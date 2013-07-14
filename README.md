@@ -13,7 +13,7 @@ The project is open source, so feel free to fork, edit and submit pull requests.
 3. Then install dependencies with `cd simplerecipesearch && npm install -d`.
 4. Run the app: `node app`.
 
-### To Do:
+### To Do
 
 * Add a way to navigate back to search from search results page
 * Display the total number of recipes on the splash page
