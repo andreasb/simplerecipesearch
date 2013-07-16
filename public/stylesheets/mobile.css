@@ -1,6 +1,7 @@
 body {
   	margin: 0 0 0 0;
   	font-family: "nimbus-sans", sans-serif;
+  	min-width: 600px;
 }
 
 #header {
