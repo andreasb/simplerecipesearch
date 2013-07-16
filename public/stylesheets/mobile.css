@@ -6,20 +6,25 @@ body {
 #header {
 	width: 100%;
 	margin: auto;
-	border-bottom: 5px solid grey;
-	padding: 0px 10px 0px 10px;
+	border-bottom: 6px solid grey;
+	padding: 0px 10px 10px 10px;
 }
 
 .number {
-	font-size: 20px;
+	font-size: 40px;
 	color: grey;
 }
 
+h1 {
+	font-size: 60px;
+	line-height: 60px;
+}
+
 .back {
-	font-size: 18px;
+	font-size: 24px;
 	height: 20px;
 	padding: 5px 0 0 0;
-	margin: 8px 0 0 0;
+	margin: 20px 0 20px 0;
 }
 
 .back a {
@@ -27,11 +32,11 @@ body {
 }
 
 h1.search {
-	margin-top: 10px;
+	margin: 20px 0 0 0;
 }
 
 ul {
-	font-size: 18px;
+	font-size: 30px;
 	width: 100%;
 	margin: auto;
 	margin-bottom: 40px;
@@ -42,16 +47,20 @@ li {
 	display: block;
 	min-width: 90%;
 	height: auto;
-	padding: 10px 10px 10px 10px;
+	padding: 30px 20px 30px 20px;
 	list-style-type: none;
 	overflow: hidden;
-	border-bottom: 1px dotted lightgrey;
+	border-bottom: 3px dotted lightgrey;
 	line-height: 22px;
 }
 
 a {
   color: #000000;
   text-decoration: none;
+}
+
+p {
+	font-size: 24px;
 }
 
 #searchwrap {
@@ -61,13 +70,10 @@ a {
 }
 
 input {
-	width: 280px;
-	height: 50px;
-	font-size: 30px;
+	width: 80%;
+	height: 80px;
+	font-size: 50px;
 	padding: 0px 10px 0px 10px;
+	margin: 0 0 20px 0;
 
-}
-
-a:hover {
-	border-bottom: 2px solid grey;
 }
