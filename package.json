@@ -1,9 +1,13 @@
 {
-  "name": "Simple Recipe Search",
+  "name": "simplerecipesearch",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "node app"
+  },
+  "engines": {
+    "node": "0.10.12",
+    "npm":  "1.2.32"
   },
   "dependencies": {
     "express": "3.3.0",
