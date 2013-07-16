@@ -4,8 +4,10 @@
 	</div>
 	<h1 class="search">{{searchTerm}} <span class="number"> {{numberOfResults}}</h1>
 </div>
-<ul>
-	{{#each recipes}}
-		<li class="recipelist"><a href="{{url}}"><span>{{{name}}}</span></a></li>
-	{{/each}}
-</ul>
+<div class="listcontainer">
+	<ul>
+		{{#each recipes}}
+			<li class="recipelist"><div class="result"><a href="{{url}}"><span>{{{name}}}</span></a></div></li>
+		{{/each}}
+	</ul>
+</div>
