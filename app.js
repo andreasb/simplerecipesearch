@@ -1,7 +1,8 @@
 var express = require('express')
   , routes = require('./routes')
   , http = require('http')
-  , search = require('./routes/search');
+  , search = require('./routes/search')
+  , error = require('./routes/404');
 
 var app = express();
 
@@ -18,6 +19,7 @@ app.configure(function(){
 
 app.get('/', routes.index);
 app.get('/:query', search.index);
+app.get('/*', error.index);
 
 var port = process.env.PORT || 3000;
 http.createServer(app).listen(port);
