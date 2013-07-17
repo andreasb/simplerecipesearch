@@ -17,7 +17,7 @@ app.configure(function(){
 });
 
 app.get('/', routes.index);
-app.get('/*', search.index);
+app.get('/:query', search.index);
 
 var port = process.env.PORT || 3000;
 http.createServer(app).listen(port);
