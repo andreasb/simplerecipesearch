@@ -19,8 +19,8 @@ exports.index = function(req, res){
 			return;
 		};
 		data.numberOfResults = data.recipes.length;
-		if (data.numberOfResults > 1000) {
-			data.recipes = data.recipes.slice(0, 999);
+		if (data.numberOfResults > 100) {
+			data.recipes = data.recipes.slice(0, 99);
 		};
 		res.render('search', data);
 	});
