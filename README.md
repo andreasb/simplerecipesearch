@@ -24,3 +24,4 @@ The project is open source, so feel free to fork, edit and submit pull requests.
 * Add a way to display more recipe info on the site
   * Idea: reveal ingredients, yield and cooking time by clicking a recipe
 * Improve search.
+* Have it only grab 100 recipes to begin with.
