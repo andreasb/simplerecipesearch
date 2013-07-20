@@ -38,6 +38,13 @@ ul {
 	padding: 0;
 }
 
+.moreButton {
+	cursor: pointer;
+	background-color: lightgrey;
+	border-top: 2px solid grey;
+	text-align: center;
+}
+
 li {
 	display: block;
 	min-width: 280px;
