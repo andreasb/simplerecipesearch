@@ -11,7 +11,7 @@ exports.index = function(req, res){
 		searchTerm: searchQuery
 	};
 
-	db.getSearchResults(res, data, function(err, data) {
+	db.getRecipes(res, data, function(err, data) {
 		var count = 0;
 		if (err) {
 			data.numberOfResults = 0;
@@ -24,4 +24,10 @@ exports.index = function(req, res){
 		};
 		res.render('search', data);
 	});
+};
+
+exports.moreRecipes = function(data, callback) {
+	db.getMoreRecipes(data, function(err, data) {
+		callback(data);
+	})
 };

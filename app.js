@@ -27,9 +27,10 @@ app.get('/*', error.index);
 
 io.sockets.on('connection', function (socket) {
   socket.on('requestForMoreRecipes', function(data) {
-    console.log(data.count);
-    data = {recipes: []};
-    socket.emit('incomingRecipes', data);
+
+    search.moreRecipes(data, function(data) {
+      socket.emit('moreRecipes', data);
+    });
   });
 });
 

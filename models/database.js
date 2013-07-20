@@ -7,8 +7,8 @@ var config = require('../config'),
 function Database () {};
 
 Database.prototype = {
-	getSearchResults: function (res, data, callback) {
-
+	getRecipes: function (res, data, callback) {
+		console.log(data.searchTerm);
 		var re = new RegExp(data.searchTerm, "i");
 		mongo.Db.connect(mongoUri, function (err, db) {
 		  db.collection(settings.collection, function(er, collection) {
@@ -35,6 +35,22 @@ Database.prototype = {
 					callback(null, data);
 				});
 			});
+		});
+	},
+	getMoreRecipes: function(data, callback) {
+		var re = new RegExp(data.search_term, "i");
+
+		mongo.Db.connect(mongoUri, function (err, db) {
+			db.collection(settings.collection, function(er, collection) {
+			    collection.find({'name': re}).skip(data.recipes_displayed).limit(100).toArray(function(err, items) {
+			    	if(er) {
+			    		callback(true, data);
+			    		return;
+			    	};
+			    	data.recipes = items;
+			    	callback(null, data)
+		    	});
+		  	});
 		});
 	}
 };
