@@ -5,10 +5,10 @@
 	<h1 class="search">{{searchTerm}} <span class="number"> {{numberOfResults}}</h1>
 </div>
 <div class="listcontainer">
-	<ul>
+	<ul id="list">
 		{{#each recipes}}
 			<li class="recipelist"><div class="result"><a href="{{url}}"><span>{{{name}}}</span></a></div></li>
 		{{/each}}
-		<li class="moreButton">more</li>
+		<li class="moreButton" onClick="getMoreRecipes()">more</li>
 	</ul>
 </div>
