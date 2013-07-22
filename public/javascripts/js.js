@@ -16,8 +16,7 @@ socket.on('moreRecipes', function (data) {
 	var recipe;
 	for (i in data.recipes) {
 		recipe = data.recipes[i];
-		var insertAt = currentCount - 1;
-		$('#list li:nth-child(' + insertAt + ')').after('<li class="recipelist"><div class="result"><a href=""><span>' + recipe.name + '</span></a></div></li>');
+		$('#list li:nth-child(' + currentCount + ')').after('<li class="recipelist"><div class="result"><a href=""><span>' + recipe.name + '</span></a></div></li>');
 	};
 	currentCount += 100;
 });
