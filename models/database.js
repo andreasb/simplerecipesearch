@@ -8,7 +8,6 @@ function Database () {};
 
 Database.prototype = {
 	getRecipes: function (res, data, callback) {
-		console.log(data.searchTerm);
 		var re = new RegExp(data.searchTerm, "i");
 		mongo.Db.connect(mongoUri, function (err, db) {
 		  db.collection(settings.collection, function(er, collection) {
@@ -39,7 +38,6 @@ Database.prototype = {
 	},
 	getMoreRecipes: function(data, callback) {
 		var re = new RegExp(data.search_term, "i");
-
 		mongo.Db.connect(mongoUri, function (err, db) {
 			db.collection(settings.collection, function(er, collection) {
 			    collection.find({'name': re}).skip(data.recipes_displayed).limit(100).toArray(function(err, items) {
