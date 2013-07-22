@@ -12,7 +12,7 @@ Database.prototype = {
 		var re = new RegExp(data.searchTerm, "i");
 		mongo.Db.connect(mongoUri, function (err, db) {
 		  db.collection(settings.collection, function(er, collection) {
-		    collection.find({'name': re}).toArray(function(err, items) {
+		    collection.find({'name': re}).limit(100).toArray(function(err, items) {
 		    	if(er) {
 		    		callback(true, data);
 		    		return;
