@@ -22,6 +22,8 @@ The project is open source, so feel free to fork, edit and submit pull requests.
 * ~~Better support for mobile browsers~~
 * ~~Have it only grab 100 recipes to begin with.~~
 * ~~Add a way to load more recipes. For now only 1000 recipes are displayed~~
+* More button should indicate when recipes are being loaded
+* More button should not show when there are less that 100 recipes for a given search.
 * Improve mobile design
 * Add a way to display more recipe info on the site
   * Idea: reveal ingredients, yield and cooking time by clicking a recipe
