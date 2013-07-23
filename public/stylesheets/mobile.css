@@ -47,6 +47,13 @@ ul {
 	padding: 0 0 0 0;
 }
 
+.moreButton {
+	cursor: pointer;
+	background-color: lightgrey;
+	border-top: 2px solid grey;
+	text-align: center;
+}
+
 li {
 	display: block;
 	padding: 30px 20px 30px 20px;
