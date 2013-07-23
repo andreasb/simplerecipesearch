@@ -20,8 +20,9 @@ The project is open source, so feel free to fork, edit and submit pull requests.
 * ~~Display the total number of recipes on the splash page~~
 * ~~Provide a bit of context of the project on the splash page~~
 * ~~Better support for mobile browsers~~
-* Add a way to load more recipes. For now only 1000 recipes are displayed
+* ~~Have it only grab 100 recipes to begin with.~~
+* ~~Add a way to load more recipes. For now only 1000 recipes are displayed~~
+* Improve mobile design
 * Add a way to display more recipe info on the site
   * Idea: reveal ingredients, yield and cooking time by clicking a recipe
 * Improve search.
-* Have it only grab 100 recipes to begin with.
