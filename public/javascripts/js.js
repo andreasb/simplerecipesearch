@@ -19,5 +19,12 @@ socket.on('moreRecipes', function (data) {
 		var insertAt = currentCount - 1;
 		$('#list li:nth-child(' + insertAt + ')').after('<li class="recipelist"><div class="result"><a href=""><span>' + recipe.name + '</span></a></div></li>');
 	};
+
 	currentCount += 100;
+
+	// Hides the more button if there are no more recipes
+	var number_of_recipes = $('.number').text();
+	if (currentCount > number_of_recipes) {
+		$('.moreButton').hide();
+	};
 });
