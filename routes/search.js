@@ -6,6 +6,8 @@ var BSON = mongo.BSONPure;
 exports.index = function(req, res){
 	var searchQuery = req.params.query;
 
+	searchQuery = searchQuery.replace('+', ' ');
+
 	var data = {
 		title: "recipes",
 		searchTerm: searchQuery
