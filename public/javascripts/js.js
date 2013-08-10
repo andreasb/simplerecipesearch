@@ -17,6 +17,7 @@ function getMoreRecipes () {
 		search_term: search_term,
 		recipes_displayed: currentCount
 	});
+	$('.moreButton').text("loading...");
 };
 
 // Load the recipes in the view when they are recieved
@@ -27,6 +28,8 @@ socket.on('moreRecipes', function (data) {
 		var insertAt = currentCount - 1;
 		$('#list li:nth-child(' + insertAt + ')').after('<li class="recipelist"><div class="result"><a href=""><span>' + recipe.name + '</span></a></div></li>');
 	};
+
+	$('.moreButton').text("more");
 
 	currentCount += 100;
 
