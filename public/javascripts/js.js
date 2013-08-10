@@ -39,3 +39,15 @@ socket.on('moreRecipes', function (data) {
 		$('.moreButton').hide();
 	};
 });
+
+// Display / hide the description
+function expandRecipe(id) {
+	if ($("#description" + id).is(":hidden")) {
+		$("#description" + id).slideDown(100);
+		$("#arrow" + id).attr('src', '/images/up.png');
+		console.log($("#arrow" + id).attr('src'));
+	} else {
+		$("#description" + id).slideUp(100);
+		$("#arrow" + id).attr('src', '/images/down.png');
+	}
+};

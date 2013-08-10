@@ -38,6 +38,37 @@ ul {
 	padding: 0;
 }
 
+.result {
+	overflow: auto;
+}
+
+.title-guy {
+	width: 260px;
+	float: left;
+	margin-right: 5px;
+}
+
+.expand-guy {
+	float: right;
+	width: 15px;
+	cursor: pointer;
+}
+
+.description p {
+	font-size: 14px;
+	font-style: italic;
+}
+
+.description {
+	display: none;
+	margin: 10px 0px 10px 0px;
+	border-top: 1px dotted lightgrey;
+}
+
+a.source {
+	font-size: 14px;
+}
+
 .moreButton {
 	cursor: pointer;
 	background-color: lightgrey;
@@ -52,9 +83,10 @@ li {
 	padding: 10px 10px 10px 10px;
 	list-style-type: none;
 	overflow: hidden;
-	border-bottom: 1px dotted lightgrey;
+	border-bottom: 1px dotted grey;
 	line-height: 22px;
 }
+
 
 a {
   color: #000000;

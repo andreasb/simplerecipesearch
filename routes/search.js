@@ -24,6 +24,7 @@ exports.index = function(req, res){
 		if (data.numberOfResults > 100) {
 			data.recipes = data.recipes.slice(0, 99);
 		};
+		console.log(data.recipes[1]);
 		res.render('search', data);
 	});
 };
