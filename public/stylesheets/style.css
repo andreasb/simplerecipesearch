@@ -10,6 +10,10 @@ body {
 	padding: 0px 10px 0px 10px;
 }
 
+.home-icon-mobile {
+	display: none;
+}
+
 .number {
 	font-size: 20px;
 	color: grey;
@@ -50,8 +54,20 @@ ul {
 
 .expand-guy {
 	float: right;
+	margin-top: 3px;
 	width: 15px;
 	cursor: pointer;
+	height: 22px;
+}
+
+.arrow-down {
+	background-image: url('/images/down.png');
+	background-repeat: no-repeat;
+}
+
+.arrow-up {
+	background-image: url('/images/up.png');
+	background-repeat: no-repeat;
 }
 
 .description p {
