@@ -45,11 +45,9 @@ socket.on('moreRecipes', function (data) {
 function expandRecipe(id) {
 	if ($("#description" + id).is(":hidden")) {
 		$("#description" + id).slideDown(100);
-		$("#expand" + id).removeClass('arrow-down');
-		$("#expand" + id).addClass('arrow-up');
+		$("#expand" + id).toggleClass('arrow-down arrow-up');
 	} else {
 		$("#description" + id).slideUp(100);
-		$("#expand" + id).removeClass('arrow-up');
-		$("#expand" + id).addClass('arrow-down');
+		$("#expand" + id).toggleClass('arrow-up arrow-down');
 	}
 };
