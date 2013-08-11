@@ -26,7 +26,8 @@ socket.on('moreRecipes', function (data) {
 	for (i in data.recipes) {
 		recipe = data.recipes[i];
 		var insertAt = currentCount - 1;
-		$('#list li:nth-child(' + insertAt + ')').after('<li class="recipelist"><div class="result"><a href=""><span>' + recipe.name + '</span></a></div></li>');
+		var index = parseInt(currentCount) + parseInt(i) - 1;
+		$('#list li:nth-child(' + index + ')').after('<li class="recipelist"><div class="result"><div class="title-guy"><a href=' + recipe.url + '>' + recipe.name + '</a></div><div class="expand-guy"><img src="/images/down.png" id="arrow' + index + '" onClick="expandRecipe(' + index + ')" width="15" height="15"/></div></div><div class="description" id="description' + index + '"><p>"' + recipe.description + '" - <a class="source" href=" '+ recipe.url +' "> ' + recipe.source + '</a></p></div></li>');
 	};
 
 	$('.moreButton').text("more");
@@ -45,7 +46,6 @@ function expandRecipe(id) {
 	if ($("#description" + id).is(":hidden")) {
 		$("#description" + id).slideDown(100);
 		$("#arrow" + id).attr('src', '/images/up.png');
-		console.log($("#arrow" + id).attr('src'));
 	} else {
 		$("#description" + id).slideUp(100);
 		$("#arrow" + id).attr('src', '/images/down.png');
