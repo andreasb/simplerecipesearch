@@ -1,25 +1,15 @@
 <div id="header">
-	<div class="back">
-		<a href="/" >&larr;</a></p>
-	</div>
-	<h1 class="search">{{searchTerm}} <span class="number" id="numberOfResults" count="{{numberOfResults}}"> {{numberOfResults}}</h1>
+	<h1 class="search-results">{{searchTerm}}</h1>
 </div>
-<div class="listcontainer">
-	<ul id="list">
-		{{#each recipes}}
-			<li class="recipelist">
-				<div class="result">
-					<div class="title-guy">
-						<a href="{{url}}">{{{name}}}</a>
-					</div>
-					<div class="expand-guy arrow-down" id="expand{{@index}}" onClick="expandRecipe({{@index}})"></div>
-				</div>
-				<div class="description" id="description{{@index}}">
-					<p>"{{description}}" - 
-					<a class="source" href="{{url}}"> {{source}}</a></p>
-				</div>
-			</li>
-		{{/each}}
-		<li class="moreButton" onClick="getMoreRecipes()">more</li>
-	</ul>
-</div>
+
+<ul id="list">
+
+	{{#each recipes}}
+		<li>
+			<a href="{{url}}" target="_blank">{{{name}}}</a>
+		</li>
+	{{/each}}
+
+	<li class="more-button" onClick="getMoreRecipes()">More</li>
+
+</ul>

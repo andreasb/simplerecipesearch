@@ -1,9 +1,10 @@
-<div id="searchwrap">
-	<img class="home-icon-mobile" src="/images/icon.png" width="120" height="120"/>
-	<h1><img class="home-icon" src="/images/icon.png" width="26" height="26"/> Simple Recipe Search <span class="number"> {{number_of_recipes}}</h1></h1>
-	<input id="searchfield"></input>
-	<p><a href="https://github.com/andreasb/simplerecipesearch">Github</a> &bull; <a href="http://openrecip.es/">Open Recipes</a> &bull; <a href="https://twitter.com/andreasb">@andreasb</a></p>
-</div>
+
+
+	<div class="search">
+		<input autofocus id="searchfield" type="text"></input>
+		<div id="submit"></div>
+	</div>
+
 
 <script text/javascript="text/javascript">
 	// Written by Dean Edwards, 2005
@@ -12,12 +13,16 @@
 	function addEvent(a,b,c){if(a.addEventListener)a.addEventListener(b,c,!1);else{c.$$guid||(c.$$guid=addEvent.guid++),a.events||(a.events={});var d=a.events[b];d||(d=a.events[b]={},a["on"+b]&&(d[0]=a["on"+b]),a["on"+b]=handleEvent),d[c.$$guid]=c}}function removeEvent(a,b,c){a.removeEventListener?a.removeEventListener(b,c,!1):a.events&&a.events[b]&&c.$$guid&&delete a.events[b][c.$$guid]}function handleEvent(a){a=a||fixEvent(window.event);var b=!0,c=this.events[a.type];for(var d in c)Object.prototype[d]||(this.$$handler=c[d],this.$$handler(a)===!1&&(b=!1));return this.$$handler&&(this.$$handler=null),b}function fixEvent(a){return a.preventDefault=fixEvent.preventDefault,a.stopPropagation=fixEvent.stopPropagation,a}addEvent.guid=1,fixEvent.preventDefault=function(){this.returnValue=!1},fixEvent.stopPropagation=function(){this.cancelBubble=!0},window.addEventListener||(document.onreadystatechange=function(){window.onload&&window.onload!=handleEvent&&(addEvent(window,"load",window.onload),window.onload=handleEvent)});
 
 	var searchfield = document.getElementById('searchfield');
-
 	addEvent(searchfield, 'keypress', function(e) {
 		if (e.keyCode === 13) {
 			redirecting();
 		}
 	});
+
+	var searchbutton = document.getElementById('submit');
+	addEvent(searchbutton, 'click', function(e) {
+        redirecting();
+    });
 
 	function redirecting () {
 		window.location.href = encodeURIComponent(searchfield.value).replace('%20','+') + '/';

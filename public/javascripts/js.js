@@ -3,7 +3,6 @@ var currentCount = 100;
 var path = window.location.pathname;
 var search_term = path.substr(1, path.lastIndexOf('/') - 1);
 
-// Hides the 'more' button if there are 100 or less to display
 $(document).ready(function(){
 	var recipes = $('#numberOfResults').attr('count');
 	if (recipes <= 100) {
@@ -11,7 +10,6 @@ $(document).ready(function(){
 	}
 });
 
-// When the 'more' button is pressed, this is called
 function getMoreRecipes () {
 	socket.emit('requestForMoreRecipes', {
 		search_term: search_term,
@@ -20,7 +18,6 @@ function getMoreRecipes () {
 	$('.moreButton').text("loading...");
 };
 
-// Load the recipes in the view when they are recieved
 socket.on('moreRecipes', function (data) {
 	var recipe;
 	for (i in data.recipes) {
@@ -40,14 +37,3 @@ socket.on('moreRecipes', function (data) {
 		$('.moreButton').hide();
 	};
 });
-
-// Display / hide the description
-function expandRecipe(id) {
-	if ($("#description" + id).is(":hidden")) {
-		$("#description" + id).slideDown(100);
-		$("#expand" + id).toggleClass('arrow-down arrow-up');
-	} else {
-		$("#description" + id).slideUp(100);
-		$("#expand" + id).toggleClass('arrow-up arrow-down');
-	}
-};
