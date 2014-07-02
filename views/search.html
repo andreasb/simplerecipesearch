@@ -5,7 +5,10 @@
 <ul id="list">
 	{{#each recipes}}
 		<li>
-			<a href="{{url}}" target="_blank">{{{name}}}</a>
+			<a href="{{url}}" target="_blank" class="recipe-name">{{{name}}}</a> <span class="source">from {{{source}}}</span>
+            {{#if description}}
+            <span class="recipe-description">{{{description}}}</span>
+            {{/if}}
 		</li>
 	{{/each}}
 	<li class="more-button" onClick="getMoreRecipes()">More</li>

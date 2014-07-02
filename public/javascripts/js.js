@@ -24,7 +24,12 @@ socket.on('moreRecipes', function (data) {
 		recipe = data.recipes[i];
 		var insertAt = currentCount - 1;
 		var index = parseInt(currentCount) + parseInt(i) - 1;
-		$('#list li:nth-child(' + insertAt + ')').after('<li><a href="' + recipe.url + '" target="_blank">' + recipe.name + '</a></li>');
+		var listElement = '<li><a href="' + recipe.url + '" target="_blank" class="recipe-name">' + recipe.name + '</a> <span class="source">from ' + recipe.source + '</span>'
+		if (recipe.description) {
+			listElement += '<span class="recipe-description">' + recipe.description + '</span>'
+		}
+		listElement += '</li>'
+		$('#list li:nth-child(' + insertAt + ')').after(listElement);
 	};
 
 	$('.moreButton').text("more");

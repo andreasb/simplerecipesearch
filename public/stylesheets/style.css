@@ -1,9 +1,8 @@
 body {
   	margin: 0 0 0 0;
-  	font-family: "Georgia", sans-serif;
+  	font-family: "Courier New";
   	size: 18px;
   	color: #2B3A42;
-  	background-color: #EFEFEF;
 }
 
 .content-wrap {
@@ -24,26 +23,28 @@ body {
 	border: none;
 }
 
+.home-link {
+	display: block;
+	margin-top: 12px;
+	padding: 10px;
+	width: 300px;
+	color: white;
+	background-color: #2B3A42;
+}
+
 /** FOOTER **/
 
 .footer {
+	background-color: white;
 	position: fixed;
 	width: 100%;
-	padding: 10px 10px 10px 10px;
+	padding: 10px;
 	bottom: 0px;
 	left: 0px;
-	color: #EFEFEF;
-	background-color: #3F5765;
 }
 
 .footer a {
-	size: 12px;
-	margin: 0 10px 0 10px;
-	color: #BDD4DE;
-}
-
-.footer a:hover {
-	color: #BDD4DE;
+	margin: 0 10px;
 }
 
 /** SEARCH **/
@@ -51,33 +52,48 @@ body {
 .search {
 	height: 60px;
 	width: 100%;
-	margin-top: 40%;
+	margin-top: 200px;
 }
 
 input {
-	height: 60px;
-	font-size: 36px;
-	padding: 0px 20px 0px 20px;
-	color: #2B3A42;
-	border: none;
-	background-color: #BDD4DE;
+	height: 48px;
+	font-size: 18px;
+	padding: 0px 18px;
+	border: 1px solid #2B3A42;
+}
+
+input[type="submit"] {
+	padding: 0;
 }
 
 input:focus {
 	outline-width: 0;
 }
 
+label {
+	line-height: 24px;
+}
+
 #searchfield {
+	font-family: "Courier New";
 	float: left;
 	width: 80%;
+	max-width: 500px;
 }
 
 #submit {
+	font-family: "Courier New";
 	float: left;
-	width: 60px;
-	height: 60px;
-	background-color: #3F5765;
+	width: 50px;
+	height: 50px;
+	background-color: #2B3A42;
 	cursor: pointer;
+	font-size: 18px;
+	color: #EFEFEF;
+}
+
+#submit:hover {
+	color: #E74C3C;
 }
 
 /** SEARCH RESULTS **/
@@ -86,24 +102,22 @@ input:focus {
 	color: #2B3A42;
 	width: 100%;
 	margin: auto;
-	border-bottom: 5px solid #3F5765;
-	padding: 30px 10px 0px 10px;
+	border-bottom: 2px solid #3F5765;
 }
 
 ul {
 	margin-bottom: 40px;
-	padding-left: 10px;
+	padding-left: 0;
 	width: 100%;
 }
 
 li {
 	display: block;
 	min-height: 20px;
-	padding: 20px 0 20px 0;
+	padding: 10px 0;
 	height: auto;
 	list-style-type: none;
 	overflow: hidden;
-	border-bottom: 1px solid #3F5765;
 	line-height: 24px;
 }
 
@@ -116,13 +130,33 @@ a:hover {
 	color: #E74C3C;
 }
 
+.recipe-name {
+	font-weight: bold;
+}
+
+.recipe-source {
+
+}
+
+.recipe-description {
+	margin-top: 10px;
+	display: block;
+	line-height: 16px;
+	font-size: 12px;
+	color: grey;
+}
+
 .more-button {
 	cursor: pointer;
-	background-color: #3F5765;
+	background-color: #2B3A42;
 	color: #EFEFEF;
 	text-align: center;
 	width: 150px;
 	margin: auto;
 	margin-top: 20px;
 	margin-bottom: 80px;
+}
+
+.more-button:hover {
+	color: #E74C3C;
 }
