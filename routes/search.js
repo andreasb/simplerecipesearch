@@ -14,16 +14,16 @@ exports.index = function(req, res){
 	};
 
 	db.getRecipes(res, data, function(err, data) {
-		var count = 0;
+
 		if (err) {
-			data.numberOfResults = 0;
 			res.render('search', data);
 			return;
 		};
-		data.numberOfResults = data.recipes.length;
-		if (data.numberOfResults > 100) {
+
+		if (data.recipes.length > 100) {
 			data.recipes = data.recipes.slice(0, 99);
 		};
+
 		res.render('search', data);
 	});
 };
