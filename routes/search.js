@@ -9,7 +9,7 @@ exports.index = function(req, res){
 	searchQuery = searchQuery.replace('+', ' ');
 
 	var data = {
-		title: "recipes",
+		title: searchQuery,
 		searchTerm: searchQuery
 	};
 

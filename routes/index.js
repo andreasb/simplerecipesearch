@@ -4,12 +4,6 @@ var mongo = require('mongodb');
 var BSON = mongo.BSONPure;
 
 exports.index = function(req, res){
-	var data = {title: "Simple Recipe Search"};
-
-	db.getNumberOfRecipes(res, data, function(err, data) {
-		if (err) {
-			data.number_of_recipes = 'na'
-		};
-		res.render('index', data);
-	});
+	var data = {title: "Home"};
+	res.render('index', data);
 };
