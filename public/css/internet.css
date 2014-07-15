@@ -61,6 +61,7 @@ input {
 	font-size: 18px;
 	padding: 0px 18px;
 	border: 1px solid #2B3A42;
+	margin-top: 8px;
 }
 
 input[type="submit"] {
@@ -73,6 +74,7 @@ input:focus {
 
 label {
 	line-height: 24px;
+	display: inline-block;
 }
 
 #searchfield {
@@ -96,13 +98,18 @@ label {
 #submit:hover {
 	color: #E74C3C;
 }
+#submit:active {
+	color: #2B3A42;
+	background-color: #E74C3C;
+}
 
 /** SEARCH RESULTS **/
 
 #header {
 	color: #2B3A42;
 	width: 100%;
-	margin: auto;
+	max-width: 800px;
+	margin-top: 40px;
 	border-bottom: 2px solid #3F5765;
 }
 
@@ -110,6 +117,7 @@ ul {
 	margin-bottom: 40px;
 	padding-left: 0;
 	width: 100%;
+	max-width: 800px;
 }
 
 li {
@@ -135,10 +143,6 @@ a:hover {
 	font-weight: bold;
 }
 
-.recipe-source {
-
-}
-
 .recipe-description {
 	margin-top: 10px;
 	display: block;
@@ -160,4 +164,8 @@ a:hover {
 
 .more-button:hover {
 	color: #E74C3C;
+}
+.more-button:active {
+	color: #2B3A42;
+	background-color: #E74C3C;
 }
