@@ -13,7 +13,7 @@ exports.index = function(req, res){
 		searchTerm: searchQuery
 	};
 
-	db.getRecipes(res, data, function(err, data) {
+	db.getRecipes(data, function(err, data) {
 
 		if (err) {
 			res.render('search', data);
@@ -29,7 +29,7 @@ exports.index = function(req, res){
 };
 
 exports.moreRecipes = function(data, callback) {
-	db.getMoreRecipes(data, function(err, data) {
+	db.getRecipes(data, function(err, data) {
 		callback(data);
 	})
 };

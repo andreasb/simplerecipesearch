@@ -4,39 +4,39 @@ var config = require('../config'),
 	settings = config.database,
 	mongoUri = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || settings.local_db_uri;
 
-function Database () {};
+function Database () {
+	this.defaultLimit = 100;
+	this.defaultSkip = 0;
+};
 
 Database.prototype = {
-	getRecipes: function (res, data, callback) {
+
+	getRecipes: function(data, callback) {
+		/* data object should include a `searchTerm`
+		 and can include `limit` and `skip` params
+		 for pagination */
+
+		var limit = data.limit || this.defaultLimit;
+		var skip = data.skip || this.defaultSkip;
 		var re = new RegExp(data.searchTerm, "i");
-		mongo.Db.connect(mongoUri, function (err, db) {
-		  db.collection(settings.collection, function(er, collection) {
-		    collection.find({'name': re}).toArray(function(err, items) {
-		    	if(er) {
-		    		callback(true, data);
-		    		return;
-		    	};
-		    	data.recipes = items;
-		    	callback(null, data)
-		    });
-		  });
-		});
-	},
-	getMoreRecipes: function(data, callback) {
-		var re = new RegExp(data.search_term, "i");
+
 		mongo.Db.connect(mongoUri, function (err, db) {
 			db.collection(settings.collection, function(er, collection) {
-			    collection.find({'name': re}).skip(data.recipes_displayed).limit(100).toArray(function(err, items) {
-			    	if(er) {
-			    		callback(true, data);
-			    		return;
-			    	};
-			    	data.recipes = items;
-			    	callback(null, data)
+			    collection
+			    	.find({'name': re})
+			    	.skip(skip).limit(limit)
+			    	.toArray(function(err, items) {
+				    	if(er) {
+				    		callback(true, data);
+				    		return;
+				    	};
+				    	data.recipes = items;
+				    	callback(null, data)
 		    	});
 		  	});
 		});
 	}
+
 };
 
 exports.Database = Database;

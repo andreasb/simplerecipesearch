@@ -1,7 +1,7 @@
 var socket = io.connect(window.location.origin);
 var currentCount = 100;
 var path = window.location.pathname;
-var search_term = path.substr(1, path.lastIndexOf('/') - 1);
+var searchTerm = path.substr(1, path.lastIndexOf('/') - 1);
 
 $(document).ready(function(){
 	var recipes = $('#numberOfResults').attr('count');
@@ -12,8 +12,8 @@ $(document).ready(function(){
 
 function getMoreRecipes () {
 	socket.emit('requestForMoreRecipes', {
-		search_term: search_term,
-		recipes_displayed: currentCount
+		searchTerm: searchTerm,
+		skip: currentCount
 	});
 	$('.moreButton').text("loading...");
 };
