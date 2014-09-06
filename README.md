@@ -4,8 +4,24 @@ Feel free to fork, hack, and submit pull requests.
 
 ### Installation
 
-1. Clone the repo with `git clone https://github.com/andreasb/simplerecipesearch.git`, or from your own fork.
-2. Install dependencies with `cd simplerecipesearch && npm install -d`.
-3. Download the recipes from [Open Recipes](http://openrecip.es/) and [put them into MongoDB](http://docs.mongodb.org/manual/reference/program/mongoimport/).
-4. Create a `config.js` based on `config.example.js` and your DB info.
-3. Run the app: `node app`.
+1. Fork the repo
+
+2. Clone your repo
+
+    git clone https://github.com/[your-username]/simplerecipesearch.git`
+
+3. Enter the directory
+
+    cd simplerecipesearch
+
+4. Install dependencies
+    
+    npm install -d
+
+5. Download the recipes from [Open Recipes](http://openrecip.es/) and [import them into your MongoDB](http://docs.mongodb.org/manual/reference/program/mongoimport/).
+
+6. Create a `config.js` based on `config.example.js` and your DB info.
+
+7. Run the app
+
+    node app
