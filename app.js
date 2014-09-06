@@ -9,7 +9,6 @@ var port = process.env.PORT || 3000;
 var server = http.createServer(app).listen(port);
 var io = require('socket.io').listen(server);
 
-
 app.configure(function(){
   app.set('views', __dirname + '/views');
   app.set('view engine', 'html');
